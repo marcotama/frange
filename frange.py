@@ -47,7 +47,7 @@ def frange(start, stop, jump, end=False, via_str=False):
         yield(float(start))
 
 
-if '__name__' == __main__:
+if __name__ == '__main__':
     assert Fraction('1.1') - Fraction(11, 10) == 0.0
     assert Fraction( 0.1 ) - Fraction(1, 10) == Fraction(1, 180143985094819840)
     
