@@ -35,8 +35,6 @@ def frange(start, stop, jump, end=False, via_str=False):
     """
     if float(jump) == 0:
         raise ValueError('frange() arg 3 must not be zero')
-    if stop is None:
-      start, stop = 0, start
     if via_str:
         start = str(start)
         stop = str(stop)
@@ -71,5 +69,4 @@ if __name__ == '__main__':
 
     assert list(frange(2, 3, '1/6', end=True))[-1] == 3.0
     assert list(frange(0, 100, '1/3', end=True))[-1] == 100.0
-    assert list(frange(4, jump=.11))[-1] == 3.96
     assert list(frange(4, 0, -0.1, via_str=True))[-1] == 0.1
